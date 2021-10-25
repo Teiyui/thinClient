@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>WebRTC PeerConnection</title>
+    <link href="./css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+<div>
+
+
+    <div>
+        <div>
+            <label>userName: </label>
+            <input type=text id="username"></input>
+        </div>
+        <div>
+            <label>room: </label>
+            <input type=text id="room"></input>
+        </div>
+    </div>
+    <div>
+        <button id="connserver">Connect Sig Server</button>
+        <!--<button id="start" disabled>Start</button>
+        <button id="call" disabled>Call</button>
+        <button id="hangup" disabled>HangUp</button>
+        -->
+        <button id="leave" disabled>Leave</button>
+    </div>
+
+    <div>
+        <input id="shareDesk" type="checkbox"/><label for="shareDesk">Share Desktop</label>
+    </div>
+
+
+    <div id="preview">
+        <div >
+            <h2>Local:</h2>
+            <video id="localvideo" autoplay playsinline muted></video>
+<!--            <h2>Offer SDP:</h2>-->
+<!--            <textarea id="offer"></textarea>-->
+        </div>
+        <div>
+            <h2>Remote:</h2>
+            <video id="remotevideo" autoplay playsinline></video>
+<!--            <h2>Answer SDP:</h2>-->
+<!--            <textarea id="answer"></textarea>-->
+        </div>
+    </div>
+
+    <table align="center">
+        <tr>
+            <td>
+                <label>Content: </label><br>
+                <textarea disabled style="line-height: 1.5;" id="output" rows="10" cols="100"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Input: </label><br>
+                <textarea disabled id="input" rows="3" cols="100"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button disabled id="send">Send</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
